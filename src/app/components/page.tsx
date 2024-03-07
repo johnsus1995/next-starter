@@ -130,7 +130,7 @@ export default function ComponentPage() {
               <h2 className='text-lg md:text-xl'>UnstyledLink</h2>
               <p className={clsx('!mt-1 text-sm', textColor)}>
                 No style applied, differentiate internal and outside links, give
-                custom cursor for outside links. this is just a text.
+                custom cursor for outside links.
               </p>
               <div className='space-x-2'>
                 <UnstyledLink href='/'>Internal Links</UnstyledLink>
