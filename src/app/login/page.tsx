@@ -12,7 +12,7 @@ export default function Page() {
     setUserState({ ...userState, email: event.target.value });
   };
 
-  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleUsernameChange = (event: any) => {
     setUserState({ ...userState, userName: event.target.value });
   };
 
