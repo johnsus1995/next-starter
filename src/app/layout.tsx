@@ -1,9 +1,9 @@
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
 import * as React from 'react';
 
 import '@/styles/globals.css';
-// !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
-import '@/styles/colors.css';
 
 import ReactQueryProvider from '@/components/providers/ReactQueryProvider';
 import RecoilContextProvider from '@/components/providers/RecoilContextProvider';
@@ -46,11 +46,18 @@ export const metadata: Metadata = {
   },
   // authors: [
   //   {
-  //     name: 'Theodorus Clarence',
-  //     url: 'https://theodorusclarence.com',
+  //     name: 'Jaison John',
+  //     url: 'https://google.com',
   //   },
   // ],
 };
+
+const PoppinsFont = Poppins({
+  subsets: ['devanagari', 'latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 export default function RootLayout({
   children,
@@ -58,10 +65,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang='en' className={`${PoppinsFont.variable}`}>
       <body>
         <ReactQueryProvider>
-          <RecoilContextProvider>{children}</RecoilContextProvider>
+          <RecoilContextProvider>
+            <AntdRegistry>{children}</AntdRegistry>
+          </RecoilContextProvider>
         </ReactQueryProvider>
       </body>
     </html>
