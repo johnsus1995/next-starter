@@ -5,6 +5,9 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
+import ReactQueryProvider from '@/components/providers/ReactQueryProvider';
+import RecoilContextProvider from '@/components/providers/RecoilContextProvider';
+
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta
@@ -56,7 +59,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <ReactQueryProvider>
+          <RecoilContextProvider>{children}</RecoilContextProvider>
+        </ReactQueryProvider>
+      </body>
     </html>
   );
 }
