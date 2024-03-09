@@ -8,6 +8,7 @@ It is encouraged to use **pnpm** so the husky hooks can work properly.
 
 ```bash
 pnpm install
+pnpm prepare
 ```
 
 ### 2. Run the development server
