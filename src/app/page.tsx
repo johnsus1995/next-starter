@@ -1,13 +1,10 @@
 'use client';
 
 import Head from 'next/head';
+import Link from 'next/link';
 import * as React from 'react';
 import '@/lib/env';
 
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import ThemeSwitcher from '@/components/utils/ThemeSwitcher';
 
 /**
@@ -37,31 +34,17 @@ export default function HomePage() {
             A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
             lll Import, Seo, Link component, pre-configured with Husky{' '}
           </p>
-          <p className='mt-2 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/johnsus1995/next-starter'>
-              See the repo
-            </ArrowLink>
-          </p>
 
-          <ButtonLink className='mt-6' href='/reusableItems' variant='light'>
-            See all components
-          </ButtonLink>
-
-          <UnstyledLink
-            href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-            className='mt-4'
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            test link
-          </UnstyledLink>
-
-          <ThemeSwitcher />
+          <div className=' py-5'>
+            <ThemeSwitcher />
+            <div className='flex gap-2 underline text-blue-500'>
+              <Link href='/register'>Register</Link>
+              <Link href='/login'>Login</Link>
+            </div>
+          </div>
 
           <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://github.com/johnsus1995'>
-              Jaison John
-            </UnderlineLink>
+            © {new Date().getFullYear()} By Jaison John
           </footer>
         </div>
       </section>
