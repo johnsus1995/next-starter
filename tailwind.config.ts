@@ -7,6 +7,13 @@ export default {
       fontFamily: {
         primary: ['var(--font-poppins)'],
       },
+      screens: {
+        sm: '640px',
+        md: '769px',
+        lg: '1025px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
       colors: {
         primary: {
           // Customize it on globals.css :root
