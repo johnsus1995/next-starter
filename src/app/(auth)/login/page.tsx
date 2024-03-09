@@ -1,6 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
+import Link from 'next/link';
 import * as React from 'react';
 
 import { TextInput } from '@/components/ui/TextInput';
@@ -38,6 +39,7 @@ export default function Login() {
         <span>Remember me</span>
         <span>Forgot password?</span>
       </div>
+      <Link href='/'>Home</Link>
     </div>
   );
 }
