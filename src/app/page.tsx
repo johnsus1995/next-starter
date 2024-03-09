@@ -8,6 +8,7 @@ import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
+import ThemeSwitcher from '@/components/utils/ThemeSwitcher';
 
 /**
  * SVGR Support
@@ -28,7 +29,7 @@ export default function HomePage() {
       <Head>
         <title>Hi</title>
       </Head>
-      <section className='bg-white'>
+      <section className='bg-white dark:bg-black'>
         <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
           <Logo className='w-16' />
           <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
@@ -53,6 +54,11 @@ export default function HomePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             test link
           </UnstyledLink>
+
+          <div className='flex gap-1 items-center'>
+            <p>Theme</p>
+            <ThemeSwitcher />
+          </div>
 
           <footer className='absolute bottom-2 text-gray-700'>
             © {new Date().getFullYear()} By{' '}

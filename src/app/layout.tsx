@@ -7,6 +7,7 @@ import '@/styles/globals.css';
 
 import ReactQueryProvider from '@/components/providers/ReactQueryProvider';
 import RecoilContextProvider from '@/components/providers/RecoilContextProvider';
+import NextThemeProvider from '@/components/providers/ThemeProvider';
 
 import { siteConfig } from '@/constant/config';
 
@@ -65,13 +66,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={`${PoppinsFont.variable}`}>
+    <html
+      lang='en'
+      className={`${PoppinsFont.variable}`}
+      // suppressHydrationWarning
+    >
       <body>
-        <ReactQueryProvider>
-          <RecoilContextProvider>
-            <AntdRegistry>{children}</AntdRegistry>
-          </RecoilContextProvider>
-        </ReactQueryProvider>
+        <NextThemeProvider>
+          <ReactQueryProvider>
+            <RecoilContextProvider>
+              <AntdRegistry>{children}</AntdRegistry>
+            </RecoilContextProvider>
+          </ReactQueryProvider>
+        </NextThemeProvider>
       </body>
     </html>
   );
