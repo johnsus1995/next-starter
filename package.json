@@ -16,10 +16,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.3.1",
-    "@ant-design/nextjs-registry": "^1.0.0",
     "@tanstack/react-query": "^5.25.0",
-    "clsx": "^2.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "lucide-react": "^0.321.0",
     "next": "^14.0.4",
     "next-themes": "^0.2.1",
@@ -27,7 +26,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "recoil": "^0.7.7",
-    "tailwind-merge": "^2.1.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
   },
   "devDependencies": {

@@ -55,10 +55,7 @@ export default function HomePage() {
             test link
           </UnstyledLink>
 
-          <div className='flex gap-1 items-center'>
-            <p>Theme</p>
-            <ThemeSwitcher />
-          </div>
+          <ThemeSwitcher />
 
           <footer className='absolute bottom-2 text-gray-700'>
             © {new Date().getFullYear()} By{' '}

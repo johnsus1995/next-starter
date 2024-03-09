@@ -7,7 +7,7 @@ import BalletBoxLogo from '@/../public/images/auth/authPageLogo.png';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className='flex w-full h-screen'>
-      <div className='left hidden md:flex justify-center items-center bg-dark text-white md:w-1/2'>
+      <div className='left hidden md:flex justify-center items-center bg-black text-white md:w-1/2'>
         <NextImage
           alt='logo'
           src={BalletBoxLogo}

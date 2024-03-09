@@ -1,4 +1,3 @@
-import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import * as React from 'react';
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.jpg`],
-    // creator: '@th_clarence',
+    // creator: '@jaison_john',
   },
   // authors: [
   //   {
@@ -74,9 +73,7 @@ export default function RootLayout({
       <body>
         <NextThemeProvider>
           <ReactQueryProvider>
-            <RecoilContextProvider>
-              <AntdRegistry>{children}</AntdRegistry>
-            </RecoilContextProvider>
+            <RecoilContextProvider>{children}</RecoilContextProvider>
           </ReactQueryProvider>
         </NextThemeProvider>
       </body>

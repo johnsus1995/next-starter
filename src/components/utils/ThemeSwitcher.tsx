@@ -24,15 +24,14 @@ export default function ThemeSwitcher() {
       />
     );
 
-  if (resolvedTheme === 'dark') {
-    return (
-      <FiSun onClick={() => setTheme('light')} className='cursor-pointer' />
-    );
-  }
-
-  if (resolvedTheme === 'light') {
-    return (
-      <FiMoon onClick={() => setTheme('dark')} className='cursor-pointer' />
-    );
-  }
+  return (
+    <div className='flex gap-1 items-center'>
+      <span>{resolvedTheme}</span>
+      {resolvedTheme === 'light' ? (
+        <FiMoon onClick={() => setTheme('dark')} className='cursor-pointer' />
+      ) : (
+        <FiSun onClick={() => setTheme('light')} className='cursor-pointer' />
+      )}
+    </div>
+  );
 }
