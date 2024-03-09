@@ -3,6 +3,9 @@ const nextConfig = {
   eslint: {
     dirs: ['src'],
   },
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
 
   reactStrictMode: true,
   swcMinify: true,
