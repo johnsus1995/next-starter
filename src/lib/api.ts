@@ -1,8 +1,6 @@
-import axios from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import { AxiosRequestHeaders } from 'axios';
 import Qs from 'qs';
-
-// import { apiErrorHandler, apiSuccessHandler } from '@/helpers/responseHandler';
 
 const axiosInstance = axios.create({
   baseURL: process.env.BASE_URL as string,
@@ -29,6 +27,25 @@ axiosInstance.interceptors.request.use(
   },
 );
 
-// axiosInstance.interceptors.response.use(apiSuccessHandler, apiErrorHandler);
+axiosInstance.interceptors.response.use(
+  (response: AxiosResponse) => {
+    return response;
+  },
+  async (error: AxiosError) => {
+    const originalRequest: any = error.config;
+
+    if (
+      error.response &&
+      error.response.status === 401 &&
+      !originalRequest._retry
+    ) {
+      // Handle 401 status and avoid infinite retries
+      window.location.pathname = '/login';
+      return Promise.reject(error);
+    }
+
+    return Promise.reject(error);
+  },
+);
 
 export default axiosInstance;
