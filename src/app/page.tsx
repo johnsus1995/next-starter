@@ -34,15 +34,15 @@ export default function HomePage() {
           <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
           <p className='mt-2 text-sm text-gray-800'>
             A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-            Import, Seo, Link component, pre-configured with Husky{' '}
+            lll Import, Seo, Link component, pre-configured with Husky{' '}
           </p>
           <p className='mt-2 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-              See the repository
+            <ArrowLink href='https://github.com/johnsus1995/next-starter'>
+              See the repo
             </ArrowLink>
           </p>
 
-          <ButtonLink className='mt-6' href='/components' variant='light'>
+          <ButtonLink className='mt-6' href='/reusableItems' variant='light'>
             See all components
           </ButtonLink>
 
@@ -51,18 +51,13 @@ export default function HomePage() {
             className='mt-4'
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              width='92'
-              height='32'
-              src='https://vercel.com/button'
-              alt='Deploy with Vercel'
-            />
+            test link
           </UnstyledLink>
 
           <footer className='absolute bottom-2 text-gray-700'>
             © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
+            <UnderlineLink href='https://github.com/johnsus1995'>
+              Jaison John
             </UnderlineLink>
           </footer>
         </div>

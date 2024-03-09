@@ -14,5 +14,5 @@
     "containerClassName"
   ],
   "typescript.preferences.importModuleSpecifier": "non-relative",
-  "cSpell.words": ["Antd"]
+  "cSpell.words": ["Antd", "clsx"]
 }
