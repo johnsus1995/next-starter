@@ -68,7 +68,7 @@ export default function RootLayout({
     <html
       lang='en'
       className={`${PoppinsFont.variable}`}
-      // suppressHydrationWarning
+      suppressHydrationWarning
     >
       <body>
         <NextThemeProvider>

@@ -2,3 +2,10 @@
 2. sitempap.ts
 3. opengraph
 4. axios
+
+Learn
+1.catch all segmments [[...slug]]
+2.file colocation
+3.private folder _name
+4.link replace attribute
+5.parallel routes
